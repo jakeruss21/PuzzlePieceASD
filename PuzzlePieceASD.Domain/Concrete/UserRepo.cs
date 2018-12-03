@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PuzzlePieceASD.Domain.Abstract;
+using PuzzlePieceASD.Domain.DAL;
 
 namespace PuzzlePieceASD.Domain.Concrete
 {
     public class UserRepo : IUserRepo
     {
-        private SignInContext context = new SignInContext();
+        private UserContext context = new UserContext();
 
         public IEnumerable<User> Users
         {
