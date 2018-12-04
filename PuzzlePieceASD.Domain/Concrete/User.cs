@@ -23,11 +23,7 @@ namespace PuzzlePieceASD.Domain.Concrete
         [Required(ErrorMessage = "Password must be at least 8 characters long, and no longer than 50 characters")]
         public string Password { get; set; }
 
-        [StringLength(20)]
-        public string UserType { get; set; }
-
-        public int UserBio { get; set; }
-
+        public int UserType { get; set; }
     }
 }
 
