@@ -10,5 +10,6 @@ namespace PuzzlePieceASD.Domain.Concrete
         public int FollowingUser { get; set; }
 
         public int UserToBeFollowed { get; set; }
+
     }
 }

@@ -1,7 +1,46 @@
-﻿@model IEnumerable<PuzzlePieceASD.Domain.DAL.UserContext>
+﻿@model IEnumerable<PuzzlePieceASD.Domain.Concrete.User>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Users</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserBio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserType)
+        </th>
+    </tr>
+    @foreach (var piece in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(pieces => piece.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(pieces => piece.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(pieces => piece.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(pieces => piece.UserBio)
+            </td>
+            <td>
+                @Html.DisplayFor(pieces => piece.UserType)
+            </td>
+        </tr>
+    }
+</table>
