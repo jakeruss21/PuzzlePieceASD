@@ -58,6 +58,26 @@ namespace PuzzlePieceASD.Domain.DAL
                 new UserBiography {BioID = 4, UserID = 4, BioInfo = "We are the largest support group in the area. Please stop by or give us a call..."}
             };
 
+            var posts = new List<Posting>
+            {
+                new Posting {PostID = 1, UserID = 3, PostingTime = DateTime.Now, Post = "Come to our Christmas party this week at 5pm!"}
+            };
+
+            var likepost = new List<LikePost>
+            {
+                new LikePost {UserID = 1, PostID = 1},
+                new LikePost {UserID = 2, PostID = 1}
+            };
+
+            var follow = new List<FollowUser>
+            {
+                new FollowUser {FollowingUser = 1, UserBeingFollowed = 3 },
+                new FollowUser {FollowingUser = 2, UserBeingFollowed = 3 },
+                new FollowUser {FollowingUser = 1, UserBeingFollowed = 4 },
+                new FollowUser {FollowingUser = 2, UserBeingFollowed = 4 },
+                new FollowUser {FollowingUser = 1, UserBeingFollowed = 2 },
+                new FollowUser {FollowingUser = 2, UserBeingFollowed = 1 }
+            };
         }
     }
 }

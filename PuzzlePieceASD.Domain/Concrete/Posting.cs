@@ -13,6 +13,6 @@ namespace PuzzlePieceASD.Domain.Concrete
 
         public string Post { get; set; }
 
-        public Nullable<System.DateTime> PostingTime { get; set; }
+        public System.DateTime PostingTime { get; set; }
     }
 }
