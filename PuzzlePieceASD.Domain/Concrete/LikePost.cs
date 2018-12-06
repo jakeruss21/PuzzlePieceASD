@@ -7,7 +7,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class LikePost
     {
-        public int LikingUser { get; set; }
+        public int UserID { get; set; }
 
         public int PostID { get; set; }
     }
