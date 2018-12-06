@@ -54,7 +54,7 @@
     <Compile Include="Concrete\LikePost.cs" />
     <Compile Include="Concrete\LocationInfo.cs" />
     <Compile Include="Concrete\PhoneNumber.cs" />
-    <Compile Include="Concrete\Post.cs" />
+    <Compile Include="Concrete\Posting.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Concrete\UserRepo.cs" />
     <Compile Include="Concrete\UserType.cs" />
