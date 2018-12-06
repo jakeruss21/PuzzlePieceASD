@@ -14,9 +14,11 @@ namespace PuzzlePieceASD.Domain.Concrete
         public string UserName { get; set; }
 
         [StringLength(50)]
+        [Display (Name = "First Name")]
         public string FirstName { get; set; }
 
         [StringLength(50)]
+        [Display (Name = "Last Name")]
         public string LastName { get; set; }
 
         [Range(8, 50)]

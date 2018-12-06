@@ -55,6 +55,7 @@
     <Compile Include="Concrete\Post.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Concrete\UserRepo.cs" />
+    <Compile Include="Concrete\UserType.cs" />
     <Compile Include="DAL\UserContext.cs" />
     <Compile Include="DAL\UserSeedDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
