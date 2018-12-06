@@ -15,10 +15,14 @@ namespace PuzzlePieceASD.Domain.DAL
         {
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<LocationInfo> Locations { get; set; }
-        public DbSet<Post> Posts { get; set; }
-        public DbSet<FollowUser> Following { get; set; }
-        public DbSet<LikePost> LikePosts { get; set; }
+        public DbSet<UserType> UserTypes        { get; set; }
+        public DbSet<User> Users                { get; set; }
+        public DbSet<LocationInfo> Locations    { get; set; }
+        public DbSet<PhoneNumber> PhoneNumbers  { get; set; }
+        public DbSet<Email> Emails              { get; set; }
+        public DbSet<UserBiography> Biographies { get; set; }
+        public DbSet<Posting> Posts             { get; set; }
+        public DbSet<FollowUser> Following      { get; set; }
+        public DbSet<LikePost> LikePosts        { get; set; }
     }
 }

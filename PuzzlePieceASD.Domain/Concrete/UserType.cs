@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PuzzlePieceASD.Domain.Concrete
 {
-    class UserType
+    public class UserType
     {
         public int UserTypeID { get; set; }
 

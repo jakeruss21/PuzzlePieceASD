@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PuzzlePieceASD.Domain.Concrete
 {
-    class UserBiography
+    public class UserBiography
     {
         public int BioID { get; set; }
 

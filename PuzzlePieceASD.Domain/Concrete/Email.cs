@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PuzzlePieceASD.Domain.Concrete
 {
-    class Email
+    public class Email
     {
         public int EmailID { get; set; }
 
