@@ -9,6 +9,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class PhoneNumber
     {
+        [Key]
         public int PhoneNumberID { get; set; }
 
         public int UserID { get; set; }

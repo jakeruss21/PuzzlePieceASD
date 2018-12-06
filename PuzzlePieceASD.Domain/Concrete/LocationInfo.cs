@@ -8,6 +8,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class LocationInfo
     {
+        [Key]
         public int LocationInfoID { get; set; }
         public int UserID { get; set; }
 

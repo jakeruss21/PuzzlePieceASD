@@ -9,6 +9,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class UserType
     {
+        [Key]
         public int UserTypeID { get; set; }
 
         [Display (Name = "User Type")]

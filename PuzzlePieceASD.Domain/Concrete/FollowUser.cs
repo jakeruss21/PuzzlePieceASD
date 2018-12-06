@@ -7,6 +7,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class FollowUser
     {
+        [Key]
         public int FollowingUser { get; set; }
 
         public int UserBeingFollowed { get; set; }

@@ -7,6 +7,7 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class Posting
     {
+        [Key]
         public int PostID { get; set; }
 
         public int UserID { get; set; }

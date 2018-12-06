@@ -8,7 +8,8 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class User
     {
-        public int UserID { get; }
+        [Key]
+        public int UserID { get; set; }
 
         [StringLength(50)]
         public string UserName { get; set; }
