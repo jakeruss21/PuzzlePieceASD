@@ -17,6 +17,8 @@ namespace PuzzlePieceASD.Domain.DAL
                 new User { UserName = "NewBranchTherapy", FirstName = "New", LastName = "Branch", Password = "Pass!@#", UserType = 3},
                 new User { UserName = "TrueYou", FirstName = "True", LastName = "You", Password = "!@#Pass", UserType = 4}
             };
+            users.ForEach(s => context.Users.Add(s));
+            context.SaveChanges();
 
             var usertype = new List<UserType>
             {
@@ -25,6 +27,8 @@ namespace PuzzlePieceASD.Domain.DAL
                 new UserType {UserTypeID = 3, TypeOfUser = "Service Provider"},
                 new UserType {UserTypeID = 4, TypeOfUser = "Support Group"}
             };
+            usertype.ForEach(s => context.UserTypes.Add(s));
+            context.SaveChanges();
 
             var location = new List<LocationInfo>
             {
@@ -33,8 +37,10 @@ namespace PuzzlePieceASD.Domain.DAL
                 new LocationInfo {LocationInfoID = 3, UserID = 3, StreetAddress1 = "001 Business Avenue", StreetAddress2 = "Suite 12B", StateID = "North Carolina", Zipcode = 93847},
                 new LocationInfo {LocationInfoID = 4, UserID = 4, StreetAddress1 = "100 NotABusiness Avenue", StateID = "North Carolina", Zipcode = 93847}
             };
+            location.ForEach(s => context.Locations.Add(s));
+            context.SaveChanges();
 
-            var phonenumber = new List<PhoneNumber>
+            var phoneNumber = new List<PhoneNumber>
             {
                 new PhoneNumber {PhoneNumberID = 1, UserID = 1, PhoneNum = "972-214-8877"},
                 new PhoneNumber {PhoneNumberID = 2, UserID = 2, PhoneNum = "214-972-7788"},
@@ -42,6 +48,8 @@ namespace PuzzlePieceASD.Domain.DAL
                 new PhoneNumber {PhoneNumberID = 4, UserID = 3, PhoneNum = "321-654-0987"},
                 new PhoneNumber {PhoneNumberID = 5, UserID = 4, PhoneNum = "555-555-5555"}
             };
+            phoneNumber.ForEach(s => context.PhoneNumbers.Add(s));
+            context.SaveChanges();
 
             var emails = new List<Email>
             {
@@ -49,6 +57,8 @@ namespace PuzzlePieceASD.Domain.DAL
                 new Email {EmailID = 2, UserID = 3, EmailAddress = "newbranchtherapy@fakeemail.com"},
                 new Email {EmailID = 3, UserID = 4, EmailAddress = "trueyou@fakeemail.com"}
             };
+            emails.ForEach(s => context.Emails.Add(s));
+            context.SaveChanges();
 
             var biography = new List<UserBiography>
             {
@@ -57,17 +67,23 @@ namespace PuzzlePieceASD.Domain.DAL
                 new UserBiography {BioID = 3, UserID = 3, BioInfo = "We specialize in speech and ABA therapy..."},
                 new UserBiography {BioID = 4, UserID = 4, BioInfo = "We are the largest support group in the area. Please stop by or give us a call..."}
             };
+            biography.ForEach(s => context.Biographies.Add(s));
+            context.SaveChanges();
 
             var posts = new List<Posting>
             {
                 new Posting {PostID = 1, UserID = 3, PostingTime = DateTime.Now, Post = "Come to our Christmas party this week at 5pm!"}
             };
+            posts.ForEach(s => context.Posts.Add(s));
+            context.SaveChanges();
 
             var likepost = new List<LikePost>
             {
                 new LikePost {UserID = 1, PostID = 1},
                 new LikePost {UserID = 2, PostID = 1}
             };
+            likepost.ForEach(s => context.LikePosts.Add(s));
+            context.SaveChanges();
 
             var follow = new List<FollowUser>
             {
@@ -78,6 +94,8 @@ namespace PuzzlePieceASD.Domain.DAL
                 new FollowUser {FollowingUser = 1, UserBeingFollowed = 2 },
                 new FollowUser {FollowingUser = 2, UserBeingFollowed = 1 }
             };
+            follow.ForEach(s => context.Following.Add(s));
+            context.SaveChanges();
         }
     }
 }
