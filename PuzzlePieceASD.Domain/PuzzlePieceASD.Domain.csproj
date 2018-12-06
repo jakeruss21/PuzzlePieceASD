@@ -56,6 +56,7 @@
     <Compile Include="Concrete\PhoneNumber.cs" />
     <Compile Include="Concrete\Posting.cs" />
     <Compile Include="Concrete\User.cs" />
+    <Compile Include="Concrete\UserBiography.cs" />
     <Compile Include="Concrete\UserRepo.cs" />
     <Compile Include="Concrete\UserType.cs" />
     <Compile Include="DAL\UserContext.cs" />
