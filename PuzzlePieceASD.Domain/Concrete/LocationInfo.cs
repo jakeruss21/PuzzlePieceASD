@@ -8,19 +8,23 @@ namespace PuzzlePieceASD.Domain.Concrete
 {
     public class LocationInfo
     {
-        public int InfoID { get; set; }
+        public int LocationInfoID { get; set; }
+        public int UserID { get; set; }
+
+        public string StreetAddress1 { get; set; }
+
+        public string StreetAddress2 { get; set; }
+
+        public string StreetAddress3 { get; set; }
 
         [StringLength(50)]
         public string City { get; set; }
 
         [StringLength(25)]
-        public string State { get; set; }
+        public string StateID { get; set; }
 
         [Range(5, 9)]
         public Nullable<int> Zipcode { get; set; }
 
-        public string UserEmail { get; set; }
-
-        public string PhoneNumber { get; set; }
     }
 }
