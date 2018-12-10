@@ -11,10 +11,12 @@ namespace PuzzlePieceASD.WebUI.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
+        private UserContext db = new UserContext();
+
+        //GET: Login
         public ActionResult Login()
         {
-            return View();
+            return View(db);
         }
 
         [HttpPost]
@@ -22,7 +24,7 @@ namespace PuzzlePieceASD.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (UserContext db = new UserContext())
+                using (db)
                 {
                     var user = db.Users.Where(a => a.UserName.Equals(model.UserName) &&
                                 a.Password.Equals(model.Password)).FirstOrDefault();
@@ -34,6 +36,13 @@ namespace PuzzlePieceASD.WebUI.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult CheckPassword(string UserName)
+        {
+
+            return View(db);
         }
     }
 }

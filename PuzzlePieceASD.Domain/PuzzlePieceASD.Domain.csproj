@@ -61,11 +61,28 @@
     <Compile Include="Concrete\UserType.cs" />
     <Compile Include="DAL\UserContext.cs" />
     <Compile Include="DAL\UserSeedDatabase.cs" />
+    <Compile Include="Migrations\201812061357584_InitialCreate.cs" />
+    <Compile Include="Migrations\201812061357584_InitialCreate.Designer.cs">
+      <DependentUpon>201812061357584_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101551118_initial.cs" />
+    <Compile Include="Migrations\201812101551118_initial.Designer.cs">
+      <DependentUpon>201812101551118_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812061357584_InitialCreate.resx">
+      <DependentUpon>201812061357584_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101551118_initial.resx">
+      <DependentUpon>201812101551118_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
