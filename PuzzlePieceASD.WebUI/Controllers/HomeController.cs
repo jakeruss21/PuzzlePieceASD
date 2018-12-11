@@ -15,8 +15,8 @@ namespace PuzzlePieceASD.WebUI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var userPieces = db.Users;
-            return View(userPieces);
+            //var userPieces = db.Users;
+            return View(db.Users);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PuzzlePieceASD.WebUI.Controllers
         private UserContext db = new UserContext();
 
         // GET: Registration
-        public ActionResult Index()
+        public ActionResult Registration()
         {
             return View();
         }

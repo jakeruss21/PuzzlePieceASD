@@ -24,5 +24,10 @@ namespace PuzzlePieceASD.Domain.DAL
         public DbSet<Posting> Posts             { get; set; }
         public DbSet<FollowUser> Following      { get; set; }
         public DbSet<LikePost> LikePosts        { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
