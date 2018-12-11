@@ -8,6 +8,6 @@ namespace PuzzlePieceASD.Domain.Abstract
 {
     public interface IUserRepo
     {
-        IEnumerable<User> Users { get; }
+        IEnumerable<UserType> UserTypes { get; }
     }
 }

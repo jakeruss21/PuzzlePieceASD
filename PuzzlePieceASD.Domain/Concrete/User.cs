@@ -27,6 +27,8 @@ namespace PuzzlePieceASD.Domain.Concrete
         public string Password { get; set; }
 
         public int UserType { get; set; }
+
+        public ICollection<UserType> UserTypes { get; set; }
     }
 }
 

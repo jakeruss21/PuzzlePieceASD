@@ -13,9 +13,9 @@ namespace PuzzlePieceASD.Domain.Concrete
     {
         private UserContext context = new UserContext();
 
-        public IEnumerable<User> Users
+        public IEnumerable<UserType> UserTypes
         {
-            get { return context.Users; }
+            get { return context.UserTypes; }
         }
     }
 }
