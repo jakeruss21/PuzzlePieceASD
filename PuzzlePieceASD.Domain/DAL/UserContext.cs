@@ -11,7 +11,7 @@ namespace PuzzlePieceASD.Domain.DAL
 {
     public class UserContext : DbContext
     {
-        public UserContext () : base("UserContext")
+        public UserContext () : base("EFUserContext")
         {
         }
 
