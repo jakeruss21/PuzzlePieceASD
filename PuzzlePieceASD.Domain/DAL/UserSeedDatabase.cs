@@ -5,7 +5,7 @@ using PuzzlePieceASD.Domain.Concrete;
 
 namespace PuzzlePieceASD.Domain.DAL
 {
-    public class UserSeedDatabase : System.Data.Entity.DropCreateDatabaseAlways<UserContext>
+    public class UserSeedDatabase : System.Data.Entity.DropCreateDatabaseIfModelChanges<UserContext>
     {
         protected override void Seed (UserContext context)
         {
