@@ -1,4 +1,4 @@
-﻿@model PuzzlePieceASD.Domain.Concrete.User
+﻿@model PuzzlePieceASD.WebUI.ViewModels.LoginViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -6,28 +6,40 @@
 
 <h2>Login</h2>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>UserName</h4>
+        <hr />
+        <div class="form-group">
+            @Html.TextBoxFor(model => model.UserName)
+            <div class="col-sm-1">
+                @Html.LabelFor(model => model.UserName)
             </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            @Html.PasswordFor(model => model.Password)
+            <div class="col-sm-1">
+                @Html.LabelFor(model => model.Password)
             </div>
-            <div class="form-group">
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Login" class="btn btn-default" />
             </div>
-        </form>
+        </div>
     </div>
-</div>
+}
 
 <div>
-    <a asp-action="Register">New User Registration</a>
+    @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
