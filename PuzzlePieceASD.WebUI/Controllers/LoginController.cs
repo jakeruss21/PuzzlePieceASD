@@ -16,7 +16,7 @@ namespace PuzzlePieceASD.WebUI.Controllers
         //GET: Login
         public ActionResult Login()
         {
-            return View(db);
+            return View(db.Users);
         }
 
         [HttpPost]

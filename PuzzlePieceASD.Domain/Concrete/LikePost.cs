@@ -9,6 +9,7 @@ namespace PuzzlePieceASD.Domain.Concrete
     public class LikePost
     {
         [Key]
+        public int LikePostID { get; set; }
         public int UserID { get; set; }
 
         public int PostID { get; set; }
